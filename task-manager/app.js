@@ -1,11 +1,13 @@
-//http_server:
+//http_server: server using http module
 var http = require('http');
 var events = require('events')
 
 var eventEmitter = new events.EventEmitter();
 
 var server = http.createServer( function(req, res){
-    eventEmitter.emit('someone requested', );// event emitter
+    eventEmitter.emit('someone requested', );// event emitter/Trigger
+    // when we create a server in this case we'll have an event
+    //being listed to by eventEmitter.on
     res.end('server works');
 });
 
